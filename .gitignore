@@ -1,11 +1,36 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
-.vscode/
-.init/
+*.py[cod]
+*.so
+*.dll
 
-# Databases
+# IDEs y editores
+.vscode/
+.idea/
+*.swp
+
+# Archivos ocultos o temporales
+*.log
+*.tmp
+*.bak
+
+# Bases de datos
 db.sqlite3
 *.db
 
-# Environments
+# Entornos virtuales
 venv/
+.env
+.env.*
+
+# Archivos de configuración sensibles
+*.cfg
+*.ini
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Carpeta de dependencias (si usas pipenv o poetry)
+pipenv.lock
+poetry.lock

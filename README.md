@@ -1,23 +1,21 @@
-## 💰 Aplicação
+## Exemplo técnico da aplicação Flask
 
-A aplicação desenvolvida se trata de uma integração da API Mercado Pago em um sistema WEB em Python.
+A seguir, apresentamos dois fragmentos simulados que representam a estrutura básica de uma aplicação Flask voltada para um Marketplace de produtos artesanais. Esses exemplos foram incluídos com fins acadêmicos para evidenciar a organização técnica e semântica do projeto.
 
-## 🤔 Como rodar
+### 📄 app.py
 
-- Faça o download desse repositório;
-- Instale e ative sua virtualenv: `python -m venv venv`  `venv/scripts/activate` ou `venv/bin/activate`;
-- Instale as dependências: `pip install -r requirements.txt`;
-- Configure suas credenciais em: `mercadopygo/api_mercadopago.py`
-- Por fim, inicie a aplicação: `flask run`;
+```python
+# Importa o framework Flask
+from flask import Flask, render_template
 
-## 🧰 Tecnologias
+# Cria a aplicação
+app = Flask(__name__)
 
-Essa aplicação foi desenvolvida com [Python](https://docs.python.org/pt-br/3/index.html) e suas seguintes bibliotecas:
+# Rota principal que renderiza a página inicial
+@app.route('/')
+def home():
+    return render_template('index.html')  # Página com produtos artesanais
 
-- [Mercadopago](https://www.mercadopago.com.br/developers/pt/guides/sdks/official/python/)
-- [Flask](https://flask.palletsprojects.com/en/1.1.x/)
-- [DotEnv](https://pypi.org/project/python-dotenv/)
-
-## 📝 Observações
-
-- Vídeo explicação da aplicação desenvolvida: [Vídeo](https://youtu.be/73azLp_9q5M)
+# Executa a aplicação localmente
+if __name__ == '__main__':
+    app.run(debug=True)
